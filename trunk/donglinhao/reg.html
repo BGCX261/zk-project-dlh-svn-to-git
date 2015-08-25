@@ -1,0 +1,178 @@
+
+<!doctype html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="css/tiga-v.css" rel="stylesheet" type="text/css">
+<script src="js/~yjuAQ~jquery.js"></script>
+<script src="js/yv.js"></script>
+<title>下厨房</title>
+
+<script src="http://www.xiachufang.com/js/~yjuAQ~apply.js"></script>
+<script src="js/regvalidate.js"></script>
+
+<style>
+.reg_right input{
+padding: 7px 3px;
+font-size: 16px;
+}
+.reg_right{
+float:left;
+width:380px;
+}
+.reg_right #password2 {
+margin-top:20px;
+}
+.reg_right input{
+width:220px;
+height:19px;
+padding:7px 0;
+border:1px solid #ccc;
+}
+.reg_right div{
+line-height:19px;
+margin-top:20px;
+}
+.reg_left{
+margin-right:20px;text-align:right;float:left;
+}
+.reg_left label{
+display:block;
+line-height:32px;
+margin-top:22px;
+}
+</style>
+<script>
+$(function() {
+$("#reg_form").validate({
+rules: {
+password1: {
+required: true,
+minlength: 5
+},
+password2: {
+required: true,
+minlength: 5,
+equalTo: "#password1"
+},
+mail: {
+required: true,
+email: true
+},
+nickname: {
+required: true,
+maxlength: 14
+},
+agree: "required"
+},
+messages: {
+password1: {
+required: "请输入密码",
+minlength: "密码必须是5个字符以上"
+},
+password2: {
+required: "请输入密码",
+minlength: "密码必须是5个字符以上",
+equalTo: "两次输入不一致，请检查"
+},
+mail: "请输入有效邮箱地址",
+nickname: {
+required: "填个昵称吧",
+maxlength: "填个短点的昵称吧"
+},
+agree: "需要同意使用协议"
+}
+});
+})
+</script>
+
+</head>
+<body>
+
+
+<div id="header"> 
+
+<a href="/">
+<h1 id="logo"></h1>
+</a>
+<form action="/search/" method="get">
+<input type="text" name="keyword" title="找菜谱" id="nav-keyword">
+<input type="submit" value="搜索" class="submit"/>
+<input type="hidden" name="cat" value="1001"/>
+
+<script>title_value_tip($("#nav-keyword"));</script>
+</form>
+
+<ul class="nav">
+<li><a href="/category/" >分类浏览</a></li>
+<li><a href="/droom/" >讨论区</a></li>
+<li><a href="/auth/apply/" >注册</a></li>
+<li><a href="/auth/login/" >登录</a></li>
+</ul>
+
+
+</div>
+
+<div id="maincontent"> 
+
+<div id="mainblock" > 
+
+<h1 class="page-title">注册账号</h1>
+<div class="page-short-body cl">
+<div class="reg_left">
+<label>邮箱</label>
+<label>密码</label>
+<label>确认密码</label>
+<label>昵称</label>
+</div>
+<div class="reg_right">
+<form method="POST" id="reg_form">
+
+<div>
+<input type="text" value="" class="" name="mail" id="mail" tabindex="1">
+ </div>
+<div>
+<input id="password1" name="password1" type="password" class="" tabindex="2" maxlength="20"/>
+ <input id="password2" name="password2" type="password" class="" tabindex="3" maxlength="20"/>
+</div>
+<div>
+<input id="nickname" style="width:155px" name="nickname" type="text" class="" tabindex="4" maxlength="20"/>
+ </div>
+<div class="gray-text">
+与众不同的昵称，能让别人记住你，不超过14个英文或者7个汉字
+</div>
+<div style="font-size:12px;color:#666;margin-top:10px;">
+
+<input type="checkbox" style="display:inline;vertical-align:-2px;width:auto;height:auto;line-height:auto;" id="agree" name="agree" checked="true">
+<label for="agree">
+我已经认真阅读并同意下厨房的
+<a href="/regagreement/">
+《使用协议》
+</a>
+</label>
+ </div>
+<div style="margin-top:48px">
+<button class="red-button" type="submit" id="submit" >注 册</button>
+</div>
+</form>
+</div>
+</div>
+
+<div class="cl" style="margin-top:25px;margin-bottom:96px; clear:both;"> 
+<div class="gray-link gray-desc" style="line-height:150%">
+ copyright@xiachufang.com <a href=" http://www.miibeian.gov.cn">京ICP备09041113号-2</a>
+</div>
+
+</div>
+</div>
+<div id="sidebarblock"> 
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+

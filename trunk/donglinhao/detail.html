@@ -1,0 +1,439 @@
+
+<!doctype html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="http://www.xiachufang.com/css/~Ti_GA~v.css" rel="stylesheet" type="text/css">
+<script src="http://www.xiachufang.com/js/~yjuAQ~jquery.js"></script>
+<script src="http://www.xiachufang.com/js/~yjuCw~v.js"></script>
+<title>
+DIY宜家瑞典肉丸(下厨房)
+</title>
+
+<style>
+.red-heart:hover{
+cursor:default;
+background-color:transparent;
+}
+#collected-block a:hover {
+background:#ccc;
+}
+.collect {
+background:#AF2F15;color:#fff;padding:8px 15px;margin:auto;
+}
+.gray-collect {
+background:#ccc;color:#fff;padding:8px 15px;margin:auto;
+}
+.uncollect-span a:link, .uncollect-span a:visited {
+ color: #ccc;
+margin-left: 20px;
+}
+</style>
+<script>
+$(function(){
+load_bgimg()
+$(".collect").click(function(){
+var self = this, id = self.rel;
+$.post("/recipe/"+id+"/", {recipe_id:id}, function() {
+$("#collect-block").hide();
+$("#collected-block").show();
+})
+});
+$(".uncollect").click( function() {
+var self = this, id = self.rel;
+$.post(".", {uncollect:id}, function() {
+$("#collect-block").show();
+$("#collected-block").hide();
+})
+});
+$("#recipe-cover").click( function() {
+var rel = this.rel;
+var self = $(this);
+var hh = $("#recipe-cover").height();
+var hh_img = $("#recipe-cover img").height();
+if(hh_img >= 410) {
+if (self.hasClass("slideshow")) {
+self.animate({height:"396px"}, 300);
+} else {
+self.animate({height:hh_img+"px"}, 300);
+}
+self.toggleClass("slideshow")
+}
+});
+})
+</script>
+
+</head>
+<body>
+
+
+<div id="header"> 
+
+<a href="/">
+<h1 id="logo"></h1>
+</a>
+<form action="/search/" method="get">
+<input type="text" name="keyword" title="找菜谱" id="nav-keyword">
+<input type="submit" value="搜索" class="submit"/>
+<input type="hidden" name="cat" value="1001"/>
+<script>title_value_tip($("#nav-keyword"));</script>
+</form>
+
+<ul class="nav">
+<li><a href="/category/" >分类浏览</a></li>
+<li><a href="/droom/" >讨论区</a></li>
+<li><a href="/auth/apply/" >注册</a></li>
+<li><a href="/auth/login/" >登录</a></li>
+</ul>
+
+
+</div>
+<div id="maincontent"> 
+
+<div id="mainblock" > 
+
+<h1 class="title-recipe-name">DIY宜家瑞典肉丸</h1>
+
+ <div id="recipe-cover" title="DIY宜家瑞典肉丸" style="background: url(http://img.xiachufang.com/recipe_pic/526/67/44/1000781.2.jpg) no-repeat scroll 50% 50% transparent; height: 396px; display: block;cursor:pointer;" ></div>
+
+
+<div class="recipe-info-block bg-white">
+<div class="cl recipe-info">
+<div class="ll">
+<div class="recipe-star-block"> 
+ <span class="star40 starmove">&nbsp;</span><span class="recipe-star-n">8.0</span>
+ </div>
+<div class="recipe-stats-block">
+<span class="recipe-stats recipe-stats-sep">1做过</span>
+<span class="recipe-stats recipe-stats-sep">52收藏</span>
+
+<span class="recipe-stats">1944浏览</span>
+</div>
+ </div>
+ <div class="recipe-collect-block ll" id="collect-block">
+<a rel="nofollow" href="/auth/login/" class="collect">+ 收藏</a>
+</div>
+ </div>
+<div style="margin-top: 35px; border-bottom: 2px #eee solid; padding: 10px 0pt; font-size:12px;">
+<a rel="nofollow" href="./create_dish/" class="">上传我做的DIY宜家瑞典肉丸</a> 
+<span style="float:right" class="sharing">
+<span class="gray-desc ll" style="line-height:22px; margin-right:15px;">
+
+分享到:
+</span> <a href="http://www.xiachufang.com/redir/?url=http%3A//v.t.sina.com.cn/share/share.php%3Ftitle%3D%25E8%258F%259C%25E8%25B0%25B1%25E3%2580%2590DIY%25E5%25AE%259C%25E5%25AE%25B6%25E7%2591%259E%25E5%2585%25B8%25E8%2582%2589%25E4%25B8%25B8%25E3%2580%2591%2Bhttp%253A%252F%252Fwww.xiachufang.com%252Frecipe%252F1000781%252F%26pic%3Dhttp%3A//img.xiachufang.com/recipe_pic/526/67/44/1000781.2.jpg&cat=share-sina"  target="_blank" class="share-sina">新浪</a><a href="http://www.xiachufang.com/redir/?url=http%3A//www.douban.com/recommend/%3Ftitle%3D%25E8%258F%259C%25E8%25B0%25B1%25E3%2580%2590DIY%25E5%25AE%259C%25E5%25AE%25B6%25E7%2591%259E%25E5%2585%25B8%25E8%2582%2589%25E4%25B8%25B8%25E3%2580%2591%26url%3Dhttp%253A%252F%252Fwww.xiachufang.com%252Frecipe%252F1000781%252F&cat=share-douban"  target="_blank" class="share-douban">豆瓣</a><a href="http://www.xiachufang.com/redir/?url=http%3A//fanfou.com/sharer%3Ft%3DDIY%25E5%25AE%259C%25E5%25AE%25B6%25E7%2591%259E%25E5%2585%25B8%25E8%2582%2589%25E4%25B8%25B8%26u%3Dhttp%253A%252F%252Fwww.xiachufang.com%252Frecipe%252F1000781%252F&cat=share-fanfou"  target="_blank" class="share-fanfou">fanfou</a><a href="http://www.xiachufang.com/redir/?url=http%3A//www.kaixin001.com/repaste/share.php%3Frtitle%3D%25E8%258F%259C%25E8%25B0%25B1%25E3%2580%2590DIY%25E5%25AE%259C%25E5%25AE%25B6%25E7%2591%259E%25E5%2585%25B8%25E8%2582%2589%25E4%25B8%25B8%25E3%2580%2591%26rurl%3Dhttp%253A%252F%252Fwww.xiachufang.com%252Frecipe%252F1000781%252F&cat=share-kaixin"  target="_blank" class="share-kaixin">开心</a><a href="http://www.xiachufang.com/redir/?url=http%3A//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey%3Ftitle%3D%25E8%258F%259C%25E8%25B0%25B1%25E3%2580%2590DIY%25E5%25AE%259C%25E5%25AE%25B6%25E7%2591%259E%25E5%2585%25B8%25E8%2582%2589%25E4%25B8%25B8%25E3%2580%2591%26url%3Dhttp%253A%252F%252Fwww.xiachufang.com%252Frecipe%252F1000781%252F&cat=share-qzone"  target="_blank" class="share-qzone">Qzone</a>
+</span>
+
+</div>
+ <div style="#margin-top:90px;_margin-top:0">
+<h2 class="sub-title">简介</h2>
+<pre>网上的食谱上说，牛肉末和猪肉末各半。
+由于我们都比较喜欢牛肉，所以牛肉比较多，大约是6：4。
+大家根据口味自行调整噢。
+</pre>
+
+</div>
+
+<div>
+<h2 class="sub-title">用料</h2>
+<table class="recipe-ing">
+ <tr>
+<td>牛肉末<span></span></td>
+ <td>猪肉末<span></span></td>
+
+</tr>
+ <tr>
+
+<td>面包糠<span></span></td>
+ <td>洋葱<span></span></td>
+
+</tr>
+ <tr>
+<td>鸡蛋<span></span></td>
+ <td><span></span></td>
+
+</tr>
+
+</table>
+
+</div>
+<div >
+<h2 class="sub-title">做法</h2>
+<div class="recipe-steps">
+<ol>
+ <li>洋葱洗净切成末，备用</li>
+ <li>切一块儿黄油热锅，待黄油充分溶化后加入洋葱翻炒。这时候就会闻到很典型的西餐气味拉(￣▽￣)～。而且油烟也比较小噢。洋葱炒软之后就关火，放凉备用</li>
+ <li>牛肉末和猪肉末按比例混合，加入黑胡椒、盐、鸡精搅拌</li>
+ <li>再加入鸡蛋、面包糠和炒好的洋葱搅拌均匀。注意搅拌的方向最后始终一致噢</li>
+
+ <li>用手捏成大小一致的丸子，大致比乒乓球小一点，太大的话容易外面都焦了里面还木有熟，就悲剧拉。这个环节建议带一次性手套制作，牛肉的油弄在手上很难清洗T__T</li>
+ <li>锅内放入剩下的黄油，不够的话再加一些也行</li>
+ <li>热锅，小火，将肉丸放进去煎。期间为了让丸子受热均匀，必须不停地翻滚丸子，直到丸子表面变成棕色，熟大约需要10分钟</li>
+ <li>看着差不多外焦里嫩了就可以出锅拉～</li>
+ </ol>
+</div>
+</div>
+ <div class="recipe-tips">
+
+<h2 class="sub-title">小贴士</h2>
+<pre>图文日志：http://www.notended.net/u/amber/archives/2010/108.html</pre>
+</div>
+
+</div>
+ <div class="recipe-dish">
+<h2 class="sub-title">大家参照这个菜谱做的DIY宜家瑞典肉丸(<a href="./dishes/">全部</a>)</h2> 
+
+<script> digg_heart();</script>
+<div class="cl dish-block">
+
+<div class="dish-item"> 
+ <a href="/dish/517/"><img src="http://img.xiachufang.com/dish/160/31/57/517.1.jpg" class="dish-pic"></a>
+
+<div style="padding: 10px; font-size: 12px; background: none repeat scroll 0% 0% #fff; line-height: 16px; color: #999;">
+<div style="overflow: hidden; height: 65px;">
+<a href="/cook/10001993/">Amber安倍</a>  <span class="gray-desc">11-05-17</span>
+</div>
+<div style="text-align: center; margin-top: 10px; font-size: 12px;">
+
+ <a href="/auth/login/" class="dh-red dh-gray" id="digg517" rel="1000781:517:dh-gray">&nbsp;</a><span id="n_digg517">0</span>
+ </div>
+
+</div>
+</div>
+ </div>
+
+</div>
+
+<div style="margin-top:35px;margin-bottom:26px;text-align:center">
+<a rel="nofollow" href="./create_dish/" class="red-link">上传我做的DIY宜家瑞典肉丸</a>
+</div>
+<h2 class="sub-title" id="latest">留言板(<a href="./comments/">全部留言</a>)</h2>
+<div id="comments"> 
+<form method="POST" id="post_reply">
+
+<div style="margin: 10px auto; position:relative;_position:static;" class="cl">
+<div style="margin-right:100px;float:_left;">
+<textarea id="reply" style="border: 1px solid rgb(204, 204, 204); width: 100%; height: 177px;" name="reply"></textarea>
+</div>
+<span style="float:right;top:6px;position:absolute;right:0px;_position:static;_margin-top:-179px;">
+ <a href="/auth/login/" class="red-link" style="color:#fff;*float:right">发言</a>
+ </span>
+</div> <input type="hidden" value="None" name="xf"></form>
+ <div> 
+
+<script src="http://www.xiachufang.com/js/~yjuAw~comments.js"></script>
+
+<div class="cl">
+<ul class="topic-reply" style="_padding-left:0;_margin-left:0">
+ 
+<li class="cl">
+<div class="user-face">
+<a href="/cook/10001993/"><img src="http://img.xiachufang.com/user/60/b6/0c/10001993.1.jpg" alt="Amber安倍"></a>
+</div>
+<div class="reply-doc">
+<div class="bg-img-green">
+<a href="/cook/10001993/" id="cu-618" >Amber安倍</a>
+</div>
+<p>@<a href="/cook/10004043/">馨媚羽</a> 嗯拉。但是其实IKEA最出彩的是那个蘸酱，还是不会做拉╮(￣▽￣")╭ 。</p>
+
+<div class="gray-link">
+ <span class="gray-desc">2011-05-17 15:01:35</span>
+&nbsp;
+ <a href="/auth/login/">回复</a>
+ </div>
+ </div>
+<br class="c">
+</li>
+ 
+<li class="cl">
+<div class="user-face">
+
+<a href="/cook/10004043/"><img src="http://img.xiachufang.com/user/60/3d/57/10004043.1.jpg" alt="馨媚羽"></a>
+</div>
+<div class="reply-doc">
+<div class="bg-img-green">
+<a href="/cook/10004043/" id="cu-617" >馨媚羽</a>
+</div>
+<p>在宜家吃过，挺好的，这次可以自己做啦～～～</p>
+<div class="gray-link">
+ <span class="gray-desc">2011-05-17 14:34:57</span>
+&nbsp;
+ <a href="/auth/login/">回复</a>
+
+ </div>
+ </div>
+<br class="c">
+</li>
+
+<span id="last"></span>
+<div class="pager"> 
+</div>
+</ul>
+</div>
+ </div>
+</div>
+
+<div class="cl" style="margin-top:25px;margin-bottom:96px; clear:both;"> 
+
+<div class="gray-link gray-desc" style="line-height:150%">
+ copyright@xiachufang.com <a href=" http://www.miibeian.gov.cn">京ICP备09041113号-2</a>
+</div>
+
+</div>
+</div>
+<div id="sidebarblock"> 
+
+<div style="background:#fff; text-align: center; padding: 15px;">
+ <div class="cl">
+<img src="http://img.xiachufang.com/user/30/b6/0c/10001993.1.jpg" style="margin-top: auto; float: left; margin-right: 10px; width: 36px; margin-bottom: 5px;" alt="Amber安倍的头像" title="Amber安倍">
+<div style="font-size: 12px; text-align: left; line-height: 18px;">
+<div style="">
+<a href="/cook/10001993/">Amber安倍</a>
+
+&nbsp;创建于2011-05-17</div>
+<div>版权归作者所有，并且受法律保护。</div>
+</div>
+</div>
+<div style="font-size: 12px; line-height: 18px; text-align: left;">
+没有作者本人的书面许可任何人不得转载或使用整体或任何部分的内容。
+</div>
+
+ </div> 
+
+
+ <h2 class="sub-title">相关菜谱</h2> 
+ <div class="recipe-list-item">
+<a href="/recipe/1000704/"><img title="洋葱胡椒蛋" class="recipe-list-pic" src="http://img.xiachufang.com/recipe_pic/140/19/fb/1000704.3.jpg"></a>
+<div class="recipe-list-info">
+
+ <h3 class="recipe-list-title"><a href="/recipe/1000704/">洋葱胡椒蛋</a></h3>
+
+<div class="recipe-list-ing">
+ 洋葱 鸡蛋 胡椒粉 葱
+ </div>
+ <div class="recipe-list-author">
+作者: 
+<a href="/cook/10002682/">木杏豆</a>
+
+</div>
+ </div>
+
+</div>
+ <div class="recipe-list-item">
+<a href="/recipe/17985/"><img title="炸洋葱圈" class="recipe-list-pic" src="http://img.xiachufang.com/recipe_pic/140/8b/65/17985.1.jpg"></a>
+<div class="recipe-list-info">
+ <h3 class="recipe-list-title"><a href="/recipe/17985/">炸洋葱圈</a></h3>
+
+<div class="recipe-list-ing">
+ 洋葱 鸡蛋 淀粉 面包糠 盐 胡椒...
+ </div>
+ <div class="recipe-list-author">
+作者: 
+summer的家
+
+</div>
+
+ </div>
+</div>
+ <div class="recipe-list-item">
+<a href="/recipe/19202/"><img title="柠香煎猪扒" class="recipe-list-pic" src="http://img.xiachufang.com/recipe_pic/140/b4/23/19202.1.jpg"></a>
+<div class="recipe-list-info">
+ <h3 class="recipe-list-title"><a href="/recipe/19202/">柠香煎猪扒</a></h3>
+
+<div class="recipe-list-ing">
+ 猪里脊 鸡蛋 洋葱 面包糠 西班牙...
+ </div>
+ <div class="recipe-list-author">
+
+作者: 
+文怡
+
+</div>
+ </div>
+</div>
+ <div class="recipe-list-item">
+<a href="/recipe/11431/"><img title="芝士鸡肉丸" class="recipe-list-pic" src="http://img.xiachufang.com/recipe_pic/140/34/47/11431.1.jpg"></a>
+<div class="recipe-list-info">
+ <h3 class="recipe-list-title"><a href="/recipe/11431/">芝士鸡肉丸</a></h3>
+
+<div class="recipe-list-ing">
+ 鸡胸肉 洋葱 马苏里拉芝士 面包...
+ </div>
+
+ </div>
+</div>
+ <div class="recipe-list-item">
+<a href="/recipe/1000106/"><img title="蛋香娃娃菜" class="recipe-list-pic" src="http://img.xiachufang.com/recipe_pic/140/10/88/1000106.1.jpg"></a>
+<div class="recipe-list-info">
+ <h3 class="recipe-list-title"><a href="/recipe/1000106/">蛋香娃娃菜</a></h3>
+
+<div class="recipe-list-ing">
+ 鸡蛋
+ </div>
+ <div class="recipe-list-author">
+
+作者: 
+<a href="/cook/10000154/">LYJ</a>
+
+</div>
+ </div>
+</div>
+ <div class="recipe-list-item">
+<a href="/recipe/17223/"><img title="荞青炒蛋" class="recipe-list-pic" src="http://img.xiachufang.com/recipe_pic/140/89/6c/17223.1.jpg"></a>
+<div class="recipe-list-info">
+ <h3 class="recipe-list-title"><a href="/recipe/17223/">荞青炒蛋</a></h3>
+
+<div class="recipe-list-ing">
+
+ 荞青 鸡蛋 洋葱 火腿 虾皮
+ </div>
+ <div class="recipe-list-author">
+作者: 
+珊珊5354
+
+</div>
+ </div>
+</div>
+ <div class="recipe-list-item">
+<a href="/recipe/20595/"><img title="西班牙土豆煎蛋" class="recipe-list-pic" src="http://img.xiachufang.com/recipe_pic/140/1d/ae/20595.1.jpg"></a>
+<div class="recipe-list-info">
+ <h3 class="recipe-list-title"><a href="/recipe/20595/">西班牙土豆煎蛋</a></h3>
+
+<div class="recipe-list-ing">
+ 土豆 洋葱 鸡蛋 腊肠
+ </div>
+ <div class="recipe-list-author">
+作者: 
+梓晴
+
+</div>
+ </div>
+</div>
+ <div class="recipe-list-item">
+<a href="/recipe/38740/"><img title="炸洋葱圈" class="recipe-list-pic" src="http://img.xiachufang.com/recipe_pic/140/2b/49/38740.1.jpg"></a>
+<div class="recipe-list-info">
+ <h3 class="recipe-list-title"><a href="/recipe/38740/">炸洋葱圈</a></h3>
+
+<div class="recipe-list-ing">
+ 洋葱 面包糠 盐 鸡蛋 淀粉 白胡...
+ </div>
+ <div class="recipe-list-author">
+作者: 
+紫色透明
+
+</div>
+ </div>
+</div>
+
+
+
+</div>
+</div>
+
+</body>
+
+
+
+
+
+
+
+

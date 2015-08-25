@@ -1,0 +1,1 @@
+$(function(){$(".reply_link").click(function(){var a=$("#cu-"+this.rel).text();if($("#reply").length){$("#reply").val("@"+a+" "+$("#reply").val()).focus();var b=$("#reply").val().length;$("#reply").selectRange(b,b);return False}else{location.href=location.href.split("?")[0]+"?page=-1#last";return False}})});
